@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B63A1303-F9D8-4E0E-9318-202B24A8BE66}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MHW___Reshade_Injector_Helper</RootNamespace>
+    <AssemblyName>MHW - Reshade Injector Helper</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Reshade Injector\reshade-shaders\Shaders\ACES.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\ArcaneBloom.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\ColorLab.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\CRT_Lottes.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\DrawText.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\FXAA.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\FXShaders\Canvas.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\FXShaders\Common.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\FXShaders\Digits.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\FXShaders\KeyCodes.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\KeyCodes.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\Macros.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_00_Base_Effects.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_00_Blend_Modes.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_00_Color_Spaces.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_00_Noise_Samplers.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_LUT_v2.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_Bloom.cfg" />
+    <None Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_Depth.cfg" />
+    <None Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_Depth_DOF.fxh" />
+    <None Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_Depth_GI.fxh" />
+    <None Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_Depth_Preprocess.fxh" />
+    <None Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_Depth_SSAO.fxh" />
+    <None Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_Global.fxh" />
+    <None Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_Lumachroma.fxh" />
+    <None Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_Tonemap.cfg" />
+    <None Include="Reshade Injector\reshade-shaders\Shaders\ReShade.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\ReShadeUI.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\SMAA.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade-shaders\Shaders\UIDetect.fxh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\ReShade.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reshade Injector\reshade_presets\DefaultPreset.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reshade Injector\inject.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\AdaptiveFog.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\AdaptiveSharpen.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\AdaptiveTonemapper.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\AmbientLight.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\ArcaneBloom.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\ArtisticVignette.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\ASCII.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\AspectRatioSuite.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Bloom.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Border.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Cartoon.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Checkerboard.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\ChromaticAberration.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Clarity.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\ColorLab.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\ColorMatrix.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Colourfulness.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\CRT.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\CRT_Yee64.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\CRT_Yeetron.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Curves.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Daltonize.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Deband.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Depth3D.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\DepthAlpha.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\DepthHaze.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\DisplayDepth.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Dither.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\DPX.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\EyeAdaption.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\FakeHDR.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\FilmGrain.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Flashlight.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\FlexibleCA.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\FocalDOF.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\FramerateLimiter.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\FXAA.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\GrainSpread.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\HexLensFlare.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\HighPassSharpen.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\HQ4X.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Layer.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Levels.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\LiftGammaGain.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\LumaSharpen.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\LUT.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\MBMB.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\MinimalColorGrading.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Monochrome.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\MultiFX.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\NeoBloom.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Nostalgia.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Overlay.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_01A_RT_Correct_Contrast.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_01B_RT_Correct_Color.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_01_Color_Gamut.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_02_Bloom.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_02_Bonus_LUT_pack.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_02_Cinetools_LUT.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_02_LUT_Creator.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_03_Color_Space_Curves.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_03_Curved_Levels.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_03_Filmic_Adaptation.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_03_Levels.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_03_Shadows_Midtones_Highlights.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_04_BlacknWhite.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_04_Color_Balance.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_04_Color_Gradients.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_04_Color_Isolation.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_04_Color_Temperature.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_04_Contrast_Brightness_Saturation.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_04_Magical_Rectangle.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_04_Saturation_Limit.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_04_Selective_Color.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_04_Selective_Color_v2.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_04_Technicolor.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_05_Sharpening.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_06_Chromatic_Aberration.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_06_Depth_Slicer.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_06_Film_Grain.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_06_Luma_Fade.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PD80\PD80_06_Posterize_Pixelate.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\PiecewiseFilmicTonemap.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_Bloom.fx" />
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_Curve.fx" />
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_Depth.fx" />
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_FXAA.fx" />
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_LightAdaptation.fx" />
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_Lumasharpen.fx" />
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_Tonemap.fx" />
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_Vibrance.fx" />
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Pirate\Pirate_Vignette.fx" />
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Pong.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\ReflectiveBumpMapping.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\RetroFog.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\SCurve.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Sepia.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Sketch.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\SMAA.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Splitscreen.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Technicolor.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Technicolor2.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Tonemap.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\UIDetect.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\UIMask.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Vibrance.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\Vignette.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\VirtualResolution.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Shaders\WhitepointFixer.fx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reshade Injector\reshade-shaders\Textures\ArcaneBloom_Dirt.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\AreaTex.dds" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\bayer16x16.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\Dirt.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\DirtA.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\DirtOVB.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\DirtOVR.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\FontAtlas.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\Layer.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\LensDB.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\LensDB2.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\LensDOV.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\LensDUV.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\LensSprite.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\lut.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\MagicBloom_Dirt.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\MatCap.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\MultiLut_atlas1.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\NeoBloom_LensDirt.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\Overlay.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\pd80_bluenoise.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\pd80_bluenoise_rgba.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\pd80_cinelut.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\pd80_clean_lut.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\pd80_example-lut.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\pd80_gaussnoise.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\pd80_neutral-lut.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\pd80_permtexture.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\SCRATCH_Example.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\SearchTex.dds" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\Sketch_Shadow.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\ssdonoise.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\Stage.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\TM_DeusEx.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\TM_Dirty.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\TM_Example.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\TM_Redblue.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\UIDetectMaskRGB.png" />
+    <Content Include="Reshade Injector\reshade-shaders\Textures\UIMask.png" />
+    <Content Include="Reshade Injector\ReShade64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
