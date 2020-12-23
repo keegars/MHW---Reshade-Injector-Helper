@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 using System.Threading;
 
 namespace MHW___Reshade_Injector_Helper
@@ -9,20 +10,52 @@ namespace MHW___Reshade_Injector_Helper
     {
         private static void Main()
         {
-            var injector_p_info = new ProcessStartInfo
+            try
             {
-                FileName = Path.Combine(Environment.CurrentDirectory, "Reshade Injector", "inject.exe"),
-                WorkingDirectory = Path.Combine(Path.Combine(Environment.CurrentDirectory, "Reshade Injector")),
-                Arguments = "MonsterHunterWorld.exe"
-            };
+                var injectorPath = ExtractResource("inject.exe", Environment.CurrentDirectory);
+                ExtractResource("ReShade.ini", Environment.CurrentDirectory);
+                ExtractResource("ReShade64.dll", Environment.CurrentDirectory);
 
-            Process.Start(injector_p_info);
+                var injectorInfo = new ProcessStartInfo
+                {
+                    FileName = injectorPath,
+                    WorkingDirectory = Environment.CurrentDirectory,
+                    Arguments = "MonsterHunterWorld.exe"
+                };
 
-            Thread.Sleep(3 * 1000);
+                Process.Start(injectorInfo);
 
-            Process.Start("steam://run/582010");
+                Thread.Sleep(3 * 1000);
 
-            Environment.Exit(1);
+                Process.Start("steam://run/582010");
+
+                Environment.Exit(1);
+            }
+            catch (Exception ex)
+            {
+                File.AppendAllText(Path.Combine(Environment.CurrentDirectory, "ErrorLog.txt"), $"{Environment.NewLine} {DateTime.Now:dd/MM/yyyy HH:mm:ss} {Environment.NewLine}  {ex.Source} {ex.Message} -  {ex.InnerException} - {ex.StackTrace}");
+            }
+        }
+
+        private static string ExtractResource(string name, string destinationPath)
+        {
+            var destination = Path.Combine(destinationPath, name);
+
+            if (File.Exists(destination))
+            {
+                return destination;
+            }
+
+            var currentAssembly = Assembly.GetExecutingAssembly();
+           
+            using (var resourceStream = currentAssembly.GetManifestResourceStream($"MHW___Reshade_Injector_Helper.{name}"))
+            using (var fileStream = File.Create(destination))
+            {
+                resourceStream.Seek(0, SeekOrigin.Begin);
+                resourceStream.CopyTo(fileStream);
+            }
+
+            return destination;
         }
     }
 }
