@@ -1,6 +1,6 @@
 MHW - Reshade Injector Helper
 
-After the latest update from Capcom to Monster Hunter World (Patch 15.10.00), ReShade has been disabled due to DXGI and D3D12 now being loaded from system32 folder and no longer being loaded from the root path folder. 
+After the latest update from Capcom to Monster Hunter World (Patch 15.10.00 - Latest Patch), ReShade has been disabled due to DXGI and D3D12 now being loaded from system32 folder and no longer being loaded from the root path folder. 
 
 Instead, with the help from the ReShade injector found here : https://framedsc.github.io/ReshadeGuides/reshadeuwp.htm and a bit of wizardy to make it easier to run one executable rather than remembering to run both in which order. This will provide a one-click helper. 
 
